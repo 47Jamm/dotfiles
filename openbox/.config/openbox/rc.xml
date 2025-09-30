@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<openbox_config xmlns="http://openbox.org/3.4/rc">
+
+  <!-- General settings -->
+  <desktops>
+    <number>1</number>
+    <firstdesk>1</firstdesk>
+    <desknames>
+      <name>Desktop 1</name>
+    </desknames>
+    <popupTime>10</popupTime>
+  </desktops>
+
+  <theme>
+    <name>Clearlooks</name>
+    <titleLayout>LIMC</titleLayout>
+  </theme>
+
+  <!-- Keybindings using Windows key as mod -->
+  <keyboard>
+    <!-- Open terminal -->
+    <keybind key="W-Return">
+      <action name="Execute">
+        <command>xterm</command>
+      </action>
+    </keybind>
+
+    <!-- Close window -->
+    <keybind key="W-F4">
+      <action name="Close"/>
+    </keybind>
+
+    <!-- Switch windows -->
+    <keybind key="W-Tab">
+      <action name="NextWindow"/>
+    </keybind>
+
+    <!-- Run launcher -->
+    <keybind key="W-d">
+      <action name="Execute">
+        <command>dmenu_run</command>
+      </action>
+    </keybind>
+
+    <!-- Move window to another workspace (example: Workspace 2) -->
+    <keybind key="W-2">
+      <action name="SendToDesktop">
+        <desktop>2</desktop>
+      </action>
+    </keybind>
+
+  </keyboard>
+
+  <!-- Mouse actions -->
+  <mouse>
+    <context name="Titlebar">
+      <mousebind button="Left" action="Press">
+        <action name="Drag"/>
+      </mousebind>
+      <mousebind button="Right" action="Press">
+        <action name="ToggleShade"/>
+      </mousebind>
+    </context>
+
+    <context name="RootWindow">
+      <mousebind button="Right" action="Press">
+        <action name="ShowMenu"/>
+      </mousebind>
+    </context>
+  </mouse>
+
+  <!-- Applications menu -->
+  <menu id="root-menu" label="Openbox 3">
+    <item label="Terminal">
+      <action name="Execute">
+        <command>xterm</command>
+      </action>
+    </item>
+    <item label="Web Browser">
+      <action name="Execute">
+        <command>firefox</command>
+      </action>
+    </item>
+    <separator/>
+    <item label="Resta
