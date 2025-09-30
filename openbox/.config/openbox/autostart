@@ -1,0 +1,26 @@
+#!/bin/bash
+# Openbox autostart script
+
+# Start network manager applet
+nm-applet &
+
+# Start pipewire sound server (if not already running)
+pipewire &
+pipewire-pulse &
+
+# Start compositor for transparency/shadows (optional)
+picom --config ~/.config/picom/picom.conf &
+
+# Start waybar or other bars (if using hybrid setup)
+# waybar &
+
+# Set background (if using feh instead of hyprpaper)
+# feh --bg-scale ~/Pictures/wallpaper.jpg &
+
+# Start dunst notifications
+dunst &
+
+# Any custom programs
+# firefox &
+
+# End of autostart
