@@ -1,0 +1,61 @@
+{
+  // --------------------------
+  // General settings
+  // --------------------------
+  "layer": "top",
+  "position": "top",
+  "margin": 0,
+  "spacing": 10,
+  "padding": 5,
+
+  "modules-left": ["sway/workspaces", "custom/focused_path"],
+  "modules-center": ["clock"],
+  "modules-right": ["pulseaudio", "network", "tray"],
+
+  // --------------------------
+  // Colors (neutral theme)
+  // --------------------------
+  "colors": {
+    "background": "#1e1e1e",
+    "foreground": "#dcd7ba",
+    "active": "#89b4fa",
+    "inactive": "#5a5a5a",
+    "urgent": "#f38ba8"
+  },
+
+  // --------------------------
+  // Clock module (center)
+  // --------------------------
+  "clock": {
+    "format": "{:%d/%m/%Y %H:%M:%S}"
+  },
+
+  // --------------------------
+  // Custom module: focused window path
+  // --------------------------
+  "custom/focused_path": {
+    "exec": "xdotool getwindowfocus getwindowname | awk '{print $0}'",
+    "interval": 2,
+    "format": "{}"
+  },
+
+  // --------------------------
+  // Audio module (pulseaudio)
+  // --------------------------
+  "pulseaudio": {
+    "format": "{volume}% {muted}"
+  },
+
+  // --------------------------
+  // Network module
+  // --------------------------
+  "network": {
+    "format-up": "{ifname}: {ipaddr}",
+    "format-down": "{ifname}: down"
+  },
+
+  // --------------------------
+  // Tray module (for applets like nm-applet, pavucontrol)
+  // --------------------------
+  "tray": {}
+}
