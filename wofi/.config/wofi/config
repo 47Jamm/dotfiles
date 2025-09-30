@@ -1,0 +1,32 @@
+[general]
+# Font settings
+font=JetBrains Mono 12
+
+# Colors (neutral theme)
+background=#1e1e1e
+foreground=#dcd7ba
+highlight=#89b4fa
+selected=#fab387
+border=1
+border-color=#5a5a5a
+border-radius=5
+
+# Window appearance
+margin=10
+padding=8
+width=400
+height=300
+
+# Position: top, center, bottom
+location=center
+
+# Number of visible items in menu
+lines=10
+
+# Search settings
+filter-mode=prefix   # matches items starting with typed text
+case-sensitive=false
+
+[behavior]
+# Exit on selection
+exit-on-select=true
