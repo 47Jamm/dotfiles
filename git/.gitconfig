@@ -1,0 +1,35 @@
+[user]
+    name = jamm
+
+[core]
+    editor = vim
+    autocrlf = input
+    safecrlf = true
+    excludesfile = ~/.gitignore_global
+
+[color]
+    ui = auto
+
+[alias]
+    st = status
+    co = checkout
+    br = branch
+    cm = commit
+    df = diff
+    lg = log --oneline --graph --decorate --all
+    amend = commit --amend
+    unstage = reset HEAD --
+    last = log -1 HEAD
+    visual = !gitk
+
+[pull]
+    rebase = false
+
+[push]
+    default = simple
+
+[merge]
+    tool = vimdiff
+
+[diff]
+    tool = vimdiff
