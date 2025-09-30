@@ -1,0 +1,39 @@
+[global]
+# General settings
+font = JetBrains Mono 12
+geometry = 300x5-10+40
+orientation = top-right
+frame_width = 1
+separator_height = 1
+padding = 8
+monitor = 0
+markup = yes
+sticky_history = no
+ignore_new_notifications = no
+
+[urgency_low]
+# Low urgency notifications
+background = #1e1e1e
+foreground = #dcd7ba
+frame_color = #5a5a5a
+timeout = 5
+icon_position = left
+format = "%s\n%b"
+
+[urgency_normal]
+# Normal urgency notifications
+background = #1e1e1e
+foreground = #dcd7ba
+frame_color = #89b4fa
+timeout = 10
+icon_position = left
+format = "%s\n%b"
+
+[urgency_critical]
+# Critical notifications
+background = #1e1e1e
+foreground = #dcd7ba
+frame_color = #f38ba8
+timeout = 0
+icon_position = left
+format = "%s\n%b"
