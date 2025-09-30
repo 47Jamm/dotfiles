@@ -1,0 +1,9 @@
+[default_session]
+# Launch Hyprland with GB keyboard
+command = "setxkbmap gb && Hyprland"
+user = "jamm"
+
+[greeter]
+# Use GTKGreet
+path = "/usr/bin/gtkgreet"
+user = "jamm"
