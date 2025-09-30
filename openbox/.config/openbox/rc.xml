@@ -1,86 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <openbox_config xmlns="http://openbox.org/3.4/rc">
 
-  <!-- General settings -->
-  <desktops>
-    <number>1</number>
-    <firstdesk>1</firstdesk>
-    <desknames>
-      <name>Desktop 1</name>
-    </desknames>
-    <popupTime>10</popupTime>
-  </desktops>
-
+  <!-- Theme -->
   <theme>
     <name>Clearlooks</name>
     <titleLayout>LIMC</titleLayout>
+    <font place="ActiveWindow">Monospace 10</font>
+    <font place="MenuHeader">Monospace Bold 10</font>
+    <font place="MenuItem">Monospace 10</font>
   </theme>
 
-  <!-- Keybindings using Windows key as mod -->
+  <!-- Keyboard shortcuts -->
   <keyboard>
     <!-- Open terminal -->
     <keybind key="W-Return">
       <action name="Execute">
-        <command>xterm</command>
+        <command>alacritty</command>
       </action>
     </keybind>
 
     <!-- Close window -->
-    <keybind key="W-F4">
+    <keybind key="W-q">
       <action name="Close"/>
     </keybind>
 
-    <!-- Switch windows -->
-    <keybind key="W-Tab">
-      <action name="NextWindow"/>
+    <!-- Switch desktops -->
+    <keybind key="W-Left">
+      <action name="DesktopPrev"/>
     </keybind>
-
-    <!-- Run launcher -->
-    <keybind key="W-d">
-      <action name="Execute">
-        <command>dmenu_run</command>
-      </action>
+    <keybind key="W-Right">
+      <action name="DesktopNext"/>
     </keybind>
-
-    <!-- Move window to another workspace (example: Workspace 2) -->
-    <keybind key="W-2">
-      <action name="SendToDesktop">
-        <desktop>2</desktop>
-      </action>
-    </keybind>
-
   </keyboard>
 
   <!-- Mouse actions -->
   <mouse>
     <context name="Titlebar">
-      <mousebind button="Left" action="Press">
-        <action name="Drag"/>
-      </mousebind>
-      <mousebind button="Right" action="Press">
-        <action name="ToggleShade"/>
-      </mousebind>
-    </context>
-
-    <context name="RootWindow">
-      <mousebind button="Right" action="Press">
-        <action name="ShowMenu"/>
-      </mousebind>
+      <mousebind button="A-Left" action="Drag"/>
+      <mousebind button="A-Right" action="Raise"/>
     </context>
   </mouse>
 
-  <!-- Applications menu -->
-  <menu id="root-menu" label="Openbox 3">
-    <item label="Terminal">
-      <action name="Execute">
-        <command>xterm</command>
-      </action>
-    </item>
-    <item label="Web Browser">
-      <action name="Execute">
-        <command>firefox</command>
-      </action>
-    </item>
-    <separator/>
-    <item label="Resta
+</openbox_config>
