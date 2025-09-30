@@ -1,0 +1,97 @@
+# Neutral Starship prompt
+# Save as: ~/.config/starship.toml
+
+# --- General ---
+add_newline = true  # extra line between prompts for readability
+command_timeout = 1000
+
+# --- Format ---
+# Order of prompt segments
+format = """\
+$username\
+$hostname\
+$directory\
+$git_branch$git_status\
+$package\
+$nodejs\
+$python\
+$rust\
+$cmd_duration\
+$line_break\
+$jobs\
+$character"""
+
+# --- Character (prompt symbol) ---
+[character]
+success_symbol = "[➜](bold green) "
+error_symbol = "[✗](bold red) "
+
+# --- Username ---
+[username]
+show_always = true
+style_user = "dim white"
+style_root = "bold red"
+
+# --- Hostname ---
+[hostname]
+ssh_only = true
+style = "dim white"
+format = "on [$hostname]($style) "
+
+# --- Directory ---
+[directory]
+style = "bold blue"
+truncation_length = 3
+truncation_symbol = "…/"
+read_only = " "
+
+# --- Git ---
+[git_branch]
+symbol = " "
+style = "bold purple"
+
+[git_status]
+style = "dim purple"
+staged = "+"
+modified = "!"
+untracked = "?"
+ahead = "⇡"
+behind = "⇣"
+diverged = "⇕"
+
+# --- Package (npm, etc.) ---
+[package]
+disabled = false
+style = "bold yellow"
+
+# --- Node.js ---
+[nodejs]
+symbol = " "
+style = "green"
+
+# --- Python ---
+[python]
+symbol = " "
+style = "yellow"
+pyenv_version_name = true
+
+# --- Rust ---
+[rust]
+symbol = " "
+style = "red"
+
+# --- Command duration ---
+[cmd_duration]
+style = "dim white"
+format = "took [$duration]($style)"
+
+# --- Jobs (background processes) ---
+[jobs]
+symbol = "✦ "
+style = "cyan"
+
+# --- Time (optional) ---
+[time]
+disabled = true  # enable if you want a clock
+format = "[$time]($style) "
+style = "dim white"
